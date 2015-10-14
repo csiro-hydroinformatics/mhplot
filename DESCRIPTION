@@ -1,0 +1,22 @@
+Package: mhplot
+Type: Package
+Title: Visualize outputs from an optimization algorithm
+Version: 0.5-1
+Date: 2015-10-14
+Authors@R: c( person("Jean-Michel", "Perraud", email =
+    "jean-michel.perraud@csiro.au", role = c("aut", "cre")))
+Author: Jean-Michel Perraud [aut, cre]
+Maintainer: J-M <jean-michel.perraud@csiro.au>
+Description: Visualize outputs from an optimization algorithm
+License: GPL-3
+LazyLoad: yes
+URL: https://github.com/jmp75/mhplot
+VignetteBuilder: knitr
+Suggests:
+    testthat,
+    knitr
+Depends:
+    R (>= 3.0.0),
+    stringr,
+    ggplot2
+

@@ -1,0 +1,16 @@
+.*\.gitignore
+.*\.git
+.*\.tlog
+.*\.ilk
+.*\.idb
+.*\.obj
+.*\.sdf
+.*\.suo
+.*ipch.*
+.*\.lastbuildstate
+.*\.intermediate\..*
+.*/Debug/.*
+.*/Release/.*
+.*/bin/.*
+.*/obj/.*
+.*src/packages/.*
