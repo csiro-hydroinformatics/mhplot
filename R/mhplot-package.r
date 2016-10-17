@@ -1,8 +1,8 @@
 ## Note to self: see the roxygen vignette for examples
 
 ## update the documentation with:
-# library(roxygen2) ; library(devtools) ; document('F:/src/github_jm/mhplot/R')
-# library(roxygen2) ; roxygenize('F:/src/github_jm/mhplot/R')
+# library(roxygen2) ; library(devtools) ; document('F:/src/github_jm/mhplot')
+# library(roxygen2) ; roxygenize('F:/src/github_jm/mhplot')
 
 #' Visualize outputs from an optimization algorithm
 #' 
