@@ -211,6 +211,8 @@ plotScore <- function(logMh, FUN=rollingMax) {
 #' @export
 subsetByPattern <- function(x, colname, pattern) {
   criterion <- x[[colname]]
+  # Fix for https://github.com/csiro-hydroinformatics/mhplot/issues/1  for R 4.0+
+  criterion <- as.factor(x[[colname]])
   lvls = levels(criterion)
   if(is.null(criterion)) stop('Subsetting vector is not a factor')
   indices <- criterion %in% lvls[stringr::str_detect(lvls, pattern)]
@@ -243,12 +245,12 @@ subsetByCategory <- function(logMh, pattern='Initial.*|Shuffling.*') {
 
 #' Extract information from an optimisation logger
 #'
-#' Extract information from an optimisation logger. This retrieves data and transforms it into a format more amenable to visualization.
+#' Extract information from an optimisation logger. This retrieves data and transforms it into a format more amenable to visualisation.
 #'
 #' @param optimizer the instance of the optimizer
-#' @param fitness the name of the fitness score that was used for the optimization, e.g. 'NSE'
-#' @param messages
-#' @param categories
+#' @param fitness the name of the fitness score that was used for the optimisation, e.g. 'NSE'
+#' @param messages column name with the content log (messages from optimisation steps)
+#' @param categories column name with the category of the message (e.g. informative or warnings, etc.)
 #' @return an object for graphing through the 'mh' package functions
 #' @export
 processLogger <- function(optimizer, fitness = "NSE", messages = "Message", categories = "Category") {
@@ -261,12 +263,12 @@ processLogger <- function(optimizer, fitness = "NSE", messages = "Message", cate
 
 #' Extract information from an optimisation logger
 #'
-#' Extract information from an optimisation logger. This retrieves data and transforms it into a format more amenable to visualization.
+#' Extract information from an optimisation logger. This retrieves data and transforms it into a format more amenable to visualisation.
 #'
-#' @param logDataFrame a data frame, extracted from an optimization logger with mh::getLoggerContent 
-#' @param fitness the name of the fitness score that was used for the optimization, e.g. 'NSE'
-#' @param messages
-#' @param categories
+#' @param logDataFrame a data frame, extracted from an optimisation logger with mh::getLoggerContent 
+#' @param fitness the name of the fitness score that was used for the optimisation, e.g. 'NSE'
+#' @param messages column name with the content log (messages from optimisation steps)
+#' @param categories column name with the category of the message (e.g. informative or warnings, etc.)
 #' @return an object for graphing through the 'mh' package functions
 #' @export
 mkOptimLog <- function(logDataFrame,fitness = "NSE", messages = "Message", categories = "Category")
