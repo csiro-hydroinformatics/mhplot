@@ -1,0 +1,5 @@
+r-mhplot: requires-r-api
+r-mhplot: initial-upload-closes-no-bugs
+r-mhplot: readme-debian-contains-debmake-template
+r-mhplot: synopsis-too-long
+r-mhplot: possible-unindented-list-in-extended-description

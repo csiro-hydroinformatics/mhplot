@@ -1,0 +1,6 @@
+
+r-mhplot source: debian-rules-is-dh_make-template
+r-mhplot source: empty-short-license-in-dep5-copyright (line 10)
+r-mhplot source: missing-field-in-dep5-copyright Copyright (empty field, line 6)
+r-mhplot source: missing-field-in-dep5-copyright License (paragraph at line 6)
+r-mhplot source: no-debian-changes
