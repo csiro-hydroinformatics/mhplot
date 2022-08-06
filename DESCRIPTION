@@ -19,4 +19,4 @@ Depends:
     R (>= 3.0.0),
     stringr,
     ggplot2
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
